@@ -30,7 +30,7 @@ void quatro() {
 			r = i, i = s;
         else if (r < s)
             r = s;
-    }
+	}
 
 	printf("%d\n", r);
 }
