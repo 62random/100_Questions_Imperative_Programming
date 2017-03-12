@@ -129,7 +129,18 @@ void strnoV (char t[]){  //14
 	t[j] = '\0';
 }
 
-
+void truncW (char t[], int n){ //15
+int i, j = 0, c = 0;
+	for (i = 0; t[i] != '\0'; i++) {
+		if (t[i] == ' ')
+			c = 0;
+		else
+			c++;
+		if (c <= n)
+			t[j++] = t[i];
+	}
+	t[j] = '\0';
+}
 
 
 
