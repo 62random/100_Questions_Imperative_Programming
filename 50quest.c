@@ -25,9 +25,12 @@ void tres() {
 
 void quatro() {
 	int i, r, s;
-	for (i = 0; scanf("%d", &s)  && (s != 0);)
+	for (i = 0; scanf("%d", &s)  && (s != 0);) {
 		if (i < s)
 			r = i, i = s;
+        else if (r < s)
+            r = s;
+    }
 
 	printf("%d\n", r);
 }
@@ -163,5 +166,5 @@ char charMaisfreq (char s[]) { //16
 
 
 int main () {
-	//testes
+	quatro();
 }
