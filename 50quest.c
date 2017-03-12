@@ -132,6 +132,25 @@ void strnoV (char t[]){  //14
 
 
 
+
+
+char charMaisfreq (char s[]) { //16
+	int i, j, n1, n2;
+	char c = 0;
+	for (i=0; s[i] != '\0';i++) {
+		n2 = 0;
+		for (j=0; s[j] != '\0';j++)
+			if (s[j] == s[i])
+				n2++;
+		if (n2 > n1) {
+			n1 = n2;
+			c = s[i];
+		}
+	}
+	return c;
+}
+
+
 int main () {
 	//testes
 }
