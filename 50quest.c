@@ -164,7 +164,129 @@ char charMaisfreq (char s[]) { //16
 	return c;
 }
 
+int iguaisConsecutivos (char s[]) { //17
+	int i,j,r = 0;
+	for (i=0; s[i] != '\0'; i++) {
+		for (j = 0;s[i+j] !='\0' && s[i] == s[i+j]; j++)
+			;
+		if (j > r)
+			r = j;
+	}
+	return r;
+}
+
+
+
+int diff ( char s[], int j) { //função auxiliar ao ex. 18
+	int d;
+	for (d = 0; d < j; d++)
+		if (s[d] == s[j])
+			return 0;
+	return 1;
+}
+
+
+int difConsecutivos(char s[]) { //18
+	int i, j, c = 0;
+	for (i = 0; s[i]!= '\0'; i++) {
+		for (j = 0; s[i+j] != '\0' && diff( s+i , j);j++)
+			;
+		if ( j > c)
+			c = j;
+	}
+	return c;   
+}
+
+
+
+
+
+
+
+
+
+int maiorPrefixo (char s1 [], char s2 []) { // 19
+	int i;
+	for (i = 0; s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i]; i++)
+	;
+	return i;
+}
+
+
+
+int maiorSufixo (char s1 [], char s2 []) { // 20
+	int i, e1, e2;
+	for (e1 = 0; s1[e1 +1] != '\0';e1++)
+		;
+	for (e2 = 0; s2[e2 +1] != '\0';e2++)
+		;
+	for (i = 0; s2[e2 - i] == s1[e1 - i] ; i++)
+		;
+        return i;
+}
+
+
+int sufPref (char s1[], char s2[]) { //21
+	int e, i, j, c = 0;
+	for ( e = 0; s1[e+1] != '\0'; e++)
+		;
+	for (i = 0; s2[i] != '\0'; i++) {
+		for (j = 0; s1[e-j] == s2[i - j] && j <= i && j<= e; j++)
+			;
+		if ( j > c)
+			c = j;
+	}
+	return c;
+}
+
+int contaPal (char s[]) { //22
+	int i, j = 0;
+	for (i = 0; s[i] != 0; i++)
+		if (s[i] != ' ' && s[i] != '\n' && (s[i-1] == ' ' || s[i-1] == '\0'))
+			j++;
+	return j;
+}
+
+
+
+int contaVogais (char s[]) { //23
+	int i, j = 0;
+	for (i = 0; s[i] != '\0'; i++)
+		if ( s[i] == 'a' || s[i] == 'A' ||
+		     s[i] == 'e' || s[i] == 'E' ||
+		     s[i] == 'i' || s[i] == 'I' ||
+		     s[i] == 'o' || s[i] == 'O' ||
+		     s[i] == 'u' || s[i] == 'U' )
+		     	j++;
+	return j;
+}
+
+int contida (char a[], char b[]) { // 24
+	int i, j;
+	for (i = 0; a[i] != '\0'; i++) {
+		if (*b == '\0')
+			return 0;
+		for (j = 0; b[j] != '\0';j++) {
+			if (b[j] == a[i])
+				break;
+			else if (b[j + 1] == '\0' && b[j] != a[i])
+				return 0;
+		}
+	}
+	return 1;
+}
+
+int palindroma (char s[]) { //25
+	int e, i;
+	for (e = 0; s[e] != '\0'; e++)
+		;
+	e --; e >> 1;
+	for (i = 0; i <= e; i++)
+		if (s[i] != s[e-i])
+			return 0;
+	return 1;
+}
 
 int main () {
-	quatro();
+	quatro(); // testes
 }
