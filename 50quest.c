@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/* Todas as perguntas disponíveis no codeboard foram testadas
+	lá e passaram os 10 testes. para as outras fiz alguns
+	testes. de resto não testei mais nada. */
+
 void um() {
 	int i, s;
 	for (i = 0; scanf("%d", &s)  && (s != 0); i += s)
