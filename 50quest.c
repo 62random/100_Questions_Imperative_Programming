@@ -305,14 +305,14 @@ int remRep (char texto []) { //26
 
 
 int limpaEspacos (char texto[]) { // 27
-	int r = 0, w=0, l= strlen(texto);
+	int r = 0, w = 0, l = strlen(texto);
 	while (r<l){
-if (texto[r] == ' ' && texto[r+1] == ' ')
-r++;
-else texto[w++] = texto[r++];
-}
-texto[w] = '\0';
-return w;
+		if (texto[r] == ' ' && texto[r+1] == ' ')
+			r++;
+		else texto[w++] = texto[r++];
+	}
+	texto[w] = '\0';
+	return w;
 }
 
 
