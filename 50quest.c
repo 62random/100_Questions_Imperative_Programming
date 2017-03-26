@@ -295,9 +295,7 @@ int palindroma (char s[]) { //25
 int remRep (char texto []) { //26
 	int i, r = 0;
 	for (i = 0; texto[i] != '\0'; i++)
-		if (texto[i] == texto[i +1])
-			;
-		else
+		if (texto[i] == texto[i +1 ])
 			texto[r++] = texto[i];
 	texto[r] = '\0';
 	return r;
