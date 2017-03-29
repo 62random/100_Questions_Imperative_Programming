@@ -509,7 +509,7 @@ int intersectMSet (int N, int v1[N], int v2[N], int r[N]){ //48
 }
 
 
-/* A pergunta 49 é exatamente igual à 49; apenas muda o operador
+/* A pergunta 49 é exatamente igual à 48; apenas muda o operador
 	"<=" para ">=" (ou de '<' para '>') */
 
 
