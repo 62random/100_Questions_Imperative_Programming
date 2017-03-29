@@ -352,16 +352,16 @@ int retiraNeg (int v[], int N){ //31
 }
 
 int menosFreq (int v[], int N){ //32
-	int r= v[0], i, j, c, f = 1;
+	int r= v[0], i, j, c, f = N;
 	for ( i = 0; i < N;i++) {
 		c = 0;
 		for(j = 0; j < N; j++)
-			if (v[j] = v[i])
+			if (v[j] == v[i])
 				c++;
-			if (c < f) {
-				f = c;
-				r = v[i];
-			}
+		if (c < f) {
+			f = c;
+			r = v[i];
+		}
 	}
 	return r;
 }
