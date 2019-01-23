@@ -1,1 +1,3 @@
-# 50_QUESTOES-PI---C
+# 100 QUESTOES_PI
+
+Solution for assignment in Imperative Programming course.
